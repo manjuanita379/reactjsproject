@@ -1,11 +1,13 @@
 service: my-lambda-service
+
 provider:
   name: aws
   runtime: nodejs18.x
   region: us-east-1
+
 functions:
   hello:
-    handler: dist/handler.hello
+    handler: handler.app
     events:
       - http:
           path: /
